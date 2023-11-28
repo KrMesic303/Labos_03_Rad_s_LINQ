@@ -19,23 +19,25 @@ namespace Zadatak2.LINQ_to_SQL
             Table<ispit> ispiti = dbcontext.GetTable<ispit>();
 
             //Get students
-            //var upit = from s in studenti
-            //    select new
-            //    {
-            //        s.stud_ID,
-            //        s.ime,
-            //        s.prezime,
-            //        s.datRod,
-            //        s.pbrRod,
-            //        s.jmbg
-            //    };
-
-            //foreach (var s in upit)
-            //{
-            //    Console.WriteLine($"{s.stud_ID}: {s.ime} {s.prezime} : {s.datRod}");
-            //}
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("Zadatak 3. - prisutni studenti");
+            Console.WriteLine("-----------------------------------");
+            var upit = from s in studenti
+                       select new
+                       {
+                           sID = s.stud_ID,
+                           ime = s.ime + " " + s.prezime
+                       };
+            
+            foreach (var s in upit)
+            {
+                Console.WriteLine($"ID: {s.sID} - {s.ime}");
+            }
 
             //Zadatak 4.
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("Zadatak 4.");
+            Console.WriteLine("-----------------------------------");
 
             var upit1 = from s in studenti
                 where ispiti.Any(ispit => ispit.stud_ID == s.stud_ID)
@@ -52,8 +54,8 @@ namespace Zadatak2.LINQ_to_SQL
                 Console.WriteLine($"Student: {s.ime} {s.prezime}; je bio na ispitima s IDem: {s.NaIspitima}");
             }
 
+            
             Console.WriteLine("-----------------------------------");
-
             var upit2 = from s in studenti
                 where ispiti.Any(ispit => ispit.stud_ID == s.stud_ID && ispit.ocjena == 1)
                 select new
@@ -63,12 +65,21 @@ namespace Zadatak2.LINQ_to_SQL
                     NaIspitima = string.Join(", ", ispiti.Where(ispit => ispit.stud_ID == s.stud_ID).Select(ispit => ispit.pred_ID))
 
                 };
-
+            Console.WriteLine("Zadatak 4. - Pali borci:");
             foreach (var s in upit2)
             {
                 Console.WriteLine($"Student: {s.ime} {s.prezime}; je PAO na ispitima s IDem: {s.NaIspitima}");
             }
-                        Console.ReadKey();
+
+
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("Zadatak 5.: ");
+            var spAllExcelentStResult = dbcontext.AllExcelentStudentsGet();
+            foreach (var s in spAllExcelentStResult)
+            {
+                Console.WriteLine($"{s.stud_ID}:{s.ime} {s.prezime} ima prosjek {s.prosjek}");
+            }
+            Console.ReadKey();
         }
     }
 }

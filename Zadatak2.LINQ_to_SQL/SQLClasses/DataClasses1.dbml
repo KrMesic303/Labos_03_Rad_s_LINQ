@@ -19,4 +19,12 @@
       <Column Name="ocjena" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
     </Type>
   </Table>
+  <Function Name="dbo.AllExcelentStudentsGet" Method="AllExcelentStudentsGet">
+    <ElementType Name="AllExcelentStudentsGetResult">
+      <Column Name="stud_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ime" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="prezime" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="prosjek" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
