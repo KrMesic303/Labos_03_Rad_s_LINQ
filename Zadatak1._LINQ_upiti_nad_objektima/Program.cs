@@ -10,6 +10,7 @@ namespace Zadatak1._LINQ_upiti_nad_objektima
     {
         static void Main(string[] args)
         {
+            #region Data
             var listaStudenata = new List<Student>()
             {
                 new Student()
@@ -65,7 +66,8 @@ namespace Zadatak1._LINQ_upiti_nad_objektima
                     }
                 }
             };
-
+            #endregion
+            
             #region Ispis svih studenata:
 
             var upit = from stud in listaStudenata
@@ -78,7 +80,7 @@ namespace Zadatak1._LINQ_upiti_nad_objektima
 
             #endregion
 
-            #region Ispis studnata koji su bili prisutni na ispitima
+            #region Ispis studnata koji su pali ispite
 
             var studentsWithExams = from student in listaStudenata
                 where listaIspita.Any(ispit => ispit.Rezultati.Any(result => result.Item1 == student.Id))

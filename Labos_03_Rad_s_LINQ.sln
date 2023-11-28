@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primjer_2", "Primjer_2\Prim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak1._LINQ_upiti_nad_objektima", "Zadatak1._LINQ_upiti_nad_objektima\Zadatak1._LINQ_upiti_nad_objektima.csproj", "{D69B2DD2-6C41-4822-A658-9121629B0465}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak2.LINQ_to_SQL", "Zadatak2.LINQ_to_SQL\Zadatak2.LINQ_to_SQL.csproj", "{461208CB-D627-41DB-BF5E-F75F75890E63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D69B2DD2-6C41-4822-A658-9121629B0465}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D69B2DD2-6C41-4822-A658-9121629B0465}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D69B2DD2-6C41-4822-A658-9121629B0465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{461208CB-D627-41DB-BF5E-F75F75890E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{461208CB-D627-41DB-BF5E-F75F75890E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{461208CB-D627-41DB-BF5E-F75F75890E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{461208CB-D627-41DB-BF5E-F75F75890E63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
