@@ -10,6 +10,7 @@ namespace TryOutLINQ
             //Primjeri: 
             //Primjer 1.
 
+            #region Primjer 1.
             int[] brojevi =
             {
                 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
@@ -22,6 +23,7 @@ namespace TryOutLINQ
             {
                 Console.WriteLine(rez.ToString() + " ");
             }
+            #endregion
 
             Console.ReadKey();
         }
